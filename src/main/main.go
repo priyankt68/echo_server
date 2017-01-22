@@ -2,7 +2,7 @@ package main
 
 import(
 	"fmt"
-<<<<<<< HEAD
+
 	"net/http"
 	"github.com/labstack/echo"
 )
@@ -21,13 +21,11 @@ var (
 
 	users = map[int]*user{}
 	seq   = 1
-=======
->>>>>>> a3c6e7ca332890cc2bb7d5570cd5a7e9e6b6f1ab
+
 )
 
 func main() {
 	fmt.Println("Yallo for the first line")
-<<<<<<< HEAD
 
 	e := echo.New()
 
@@ -65,6 +63,6 @@ func createUser(c echo.Context) error {
 	seq++
 	return c.JSON(http.StatusCreated, u)
 }
-=======
+
 }
->>>>>>> a3c6e7ca332890cc2bb7d5570cd5a7e9e6b6f1ab
+
