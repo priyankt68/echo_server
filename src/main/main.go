@@ -11,10 +11,20 @@ func main() {
 
 	e := echo.New()
 
-	e.GET("/", func (c echo.Context) error {
-		return c.String(http.StatusOK, "Yallow from the web side!")
-		
-	})
+	e.GET("/", index)
+	e.GET("/users/:id", path_paramters)
 
 	e.Start(":8000")
+}
+
+func index(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello Universe!")
+	
+}
+
+func path_paramters(c echo.Context) error {
+	
+	id := c.Param("id")
+	return c.String(http.StatusOK, id)
+	
 }
